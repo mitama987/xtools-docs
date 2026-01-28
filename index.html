@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XToolsPro2 ユーザーガイド</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- サイドナビゲーション -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <span class="logo-icon">X</span>
+                <span class="logo-text">ToolsPro2</span>
+            </div>
+            <span class="version-badge">v3.7</span>
+        </div>
+
+        <div class="nav-section">
+            <div class="nav-section-title">はじめに</div>
+            <a href="#overview" class="nav-link active">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M12 16v-4M12 8h.01"/>
+                </svg>
+                概要
+            </a>
+            <a href="#setup" class="nav-link">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                </svg>
+                セットアップ
+            </a>
+            <a href="#login" class="nav-link">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M13.8 12H3"/>
+                </svg>
+                ログイン・認証
+            </a>
+        </div>
+
+        <div class="nav-section">
+            <div class="nav-section-title">機能ガイド</div>
+            <a href="#basics" class="nav-link">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                    <line x1="3" y1="9" x2="21" y2="9"/>
+                    <line x1="9" y1="21" x2="9" y2="9"/>
+                </svg>
+                基本機能
+            </a>
+            <a href="#accounts" class="nav-link">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+                アカウント管理
+            </a>
+            <a href="#regular-post" class="nav-link">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                定期投稿
+            </a>
+            <a href="#scheduled-post" class="nav-link">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                    <line x1="16" y1="2" x2="16" y2="6"/>
+                    <line x1="8" y1="2" x2="8" y2="6"/>
+                    <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                予約投稿
+            </a>
+            <a href="#images" class="nav-link">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                    <polyline points="21 15 16 10 5 21"/>
+                </svg>
+                画像管理
+            </a>
+        </div>
+
+        <div class="nav-section">
+            <div class="nav-section-title">サポート</div>
+            <a href="#proxy" class="nav-link">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+                プロキシ設定
+            </a>
+            <a href="#troubleshooting" class="nav-link">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                    <line x1="12" y1="17" x2="12.01" y2="17"/>
+                </svg>
+                トラブルシューティング
+            </a>
+            <a href="#requirements" class="nav-link">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                    <line x1="8" y1="21" x2="16" y2="21"/>
+                    <line x1="12" y1="17" x2="12" y2="21"/>
+                </svg>
+                システム要件
+            </a>
+        </div>
+
+        <div class="sidebar-footer">
+            <a href="https://join.slack.com/t/youyou-community/shared_invite/zt-33endw2tz-IZ2Y3OoO3Xk0W7lWtHYN7A" class="support-link" target="_blank">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                    <path d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zM6.313 15.165a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313zM8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zM8.834 6.313a2.528 2.528 0 0 1 2.521 2.521 2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312zM18.956 8.834a2.528 2.528 0 0 1 2.522-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.522 2.521h-2.522V8.834zM17.688 8.834a2.528 2.528 0 0 1-2.523 2.521 2.527 2.527 0 0 1-2.52-2.521V2.522A2.527 2.527 0 0 1 15.165 0a2.528 2.528 0 0 1 2.523 2.522v6.312zM15.165 18.956a2.528 2.528 0 0 1 2.523 2.522A2.528 2.528 0 0 1 15.165 24a2.527 2.527 0 0 1-2.52-2.522v-2.522h2.52zM15.165 17.688a2.527 2.527 0 0 1-2.52-2.523 2.526 2.526 0 0 1 2.52-2.52h6.313A2.527 2.527 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.523h-6.313z"/>
+                </svg>
+                Slackコミュニティ
+            </a>
+        </div>
+    </nav>
+
+    <!-- モバイルメニューボタン -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+    </button>
+
+    <!-- メインコンテンツ -->
+    <main class="main-content">
+        <!-- ヒーローセクション -->
+        <section class="hero" id="overview">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <div class="hero-badge">ユーザーガイド v3.7</div>
+                <h1 class="hero-title">
+                    <span class="hero-x">X</span>ToolsPro2
+                </h1>
+                <p class="hero-subtitle">X（旧Twitter）投稿自動化ツール</p>
+                <p class="hero-description">
+                    複数アカウントの一元管理から、定期投稿・予約投稿・ランダム投稿まで。<br>
+                    あなたのソーシャルメディア運用を強力にサポートします。
+                </p>
+                <div class="hero-actions">
+                    <a href="#setup" class="btn btn-primary">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                        </svg>
+                        セットアップを始める
+                    </a>
+                    <a href="https://drive.google.com/open?id=16GMet9gThz__7LVV9PoXygkseEAX_1qb&usp=drive_fs" class="btn btn-secondary" target="_blank">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="7 10 12 15 17 10"/>
+                            <line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                        ダウンロード
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 主な機能 -->
+        <section class="features-section">
+            <h2 class="section-title">主な機能</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3>複数アカウント管理</h3>
+                    <p>複数のXアカウントを同時に管理。アカウントごとに異なる設定が可能です。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <h3>定期投稿</h3>
+                    <p>指定した間隔で自動的に投稿を実行。5分から24時間まで柔軟に設定可能。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                    </div>
+                    <h3>予約投稿</h3>
+                    <p>特定の日時に投稿を実行。繰り返し設定で毎日同じ時刻に自動投稿も可能。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <circle cx="8.5" cy="8.5" r="1.5"/>
+                            <polyline points="21 15 16 10 5 21"/>
+                        </svg>
+                    </div>
+                    <h3>画像投稿</h3>
+                    <p>最大4枚の画像を同時添付可能。JPEG、PNG、GIF形式に対応。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h3>セキュリティ</h3>
+                    <p>デバイス認証でPCごとの固有認証。暗号化によるデータ保護。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                        </svg>
+                    </div>
+                    <h3>今すぐ投稿</h3>
+                    <p>スケジュールを待たずに手動で即座に投稿を実行できます。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- セットアップ -->
+        <section class="content-section" id="setup">
+            <h2 class="section-title">セットアップ</h2>
+
+            <div class="content-card">
+                <h3 class="card-title">
+                    <span class="step-number">1</span>
+                    アプリケーションのダウンロード
+                </h3>
+                <p>最新版のXToolsPro2実行ファイルをダウンロードしてください。</p>
+
+                <div class="info-box">
+                    <div class="info-box-header">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="7 10 12 15 17 10"/>
+                            <line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                        ダウンロード情報
+                    </div>
+                    <div class="info-box-content">
+                        <div class="info-item">
+                            <span class="info-label">最新バージョン</span>
+                            <span class="info-value">v2.23</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">更新日</span>
+                            <span class="info-value">2025年11月17日</span>
+                        </div>
+                        <a href="https://drive.google.com/open?id=16GMet9gThz__7LVV9PoXygkseEAX_1qb&usp=drive_fs" class="download-btn" target="_blank">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="7 10 12 15 17 10"/>
+                                <line x1="12" y1="15" x2="12" y2="3"/>
+                            </svg>
+                            Google Driveからダウンロード
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h3 class="card-title">
+                    <span class="step-number">2</span>
+                    アプリケーションの起動
+                </h3>
+
+                <div class="steps-list">
+                    <div class="step-item">
+                        <div class="step-icon">1</div>
+                        <div class="step-content">
+                            <strong>XToolsPro2_NoAPI.exe</strong> をダブルクリック
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">2</div>
+                        <div class="step-content">
+                            コマンドプロンプトが自動起動します
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">3</div>
+                        <div class="step-content">
+                            URLにアクセス：<code>http://localhost:5502</code><br>
+                            <span class="hint">Ctrl+クリックでURLを開く、またはブラウザに貼り付け</span>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">4</div>
+                        <div class="step-content">
+                            ブラウザで起動完了！
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h3 class="card-title">
+                    <span class="step-number">3</span>
+                    初回セットアップ
+                </h3>
+                <ol class="numbered-list">
+                    <li>初回起動時にデータベースが自動作成されます</li>
+                    <li>ログイン画面が表示されるので、メールアドレスを入力してログイン</li>
+                    <li>セットアップ完了！</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- ログイン・認証 -->
+        <section class="content-section" id="login">
+            <h2 class="section-title">ログイン・認証</h2>
+
+            <div class="content-card">
+                <h3 class="card-title">ログイン手順</h3>
+                <div class="highlight-box">
+                    <ol class="numbered-list">
+                        <li><strong>ログイン画面</strong>でメールアドレスを入力</li>
+                        <li><strong>認証成功</strong>でメイン画面に遷移</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h3 class="card-title">ログアウト</h3>
+                <p><strong>設定タブ</strong> → <strong>ログアウト</strong>ボタンをクリックでログアウトできます。</p>
+            </div>
+        </section>
+
+        <!-- 基本機能 -->
+        <section class="content-section" id="basics">
+            <h2 class="section-title">基本機能</h2>
+
+            <div class="content-card">
+                <h3 class="card-title">メイン画面の構成</h3>
+                <h4>サイドバーメニュー</h4>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <span class="menu-name">ダッシュボード</span>
+                        <span class="menu-desc">全体の状況確認</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="menu-name">アカウント管理</span>
+                        <span class="menu-desc">Xアカウントの追加・編集</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="menu-name">定期投稿</span>
+                        <span class="menu-desc">繰り返し投稿の管理</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="menu-name">予約投稿</span>
+                        <span class="menu-desc">日時指定投稿の管理</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="menu-name">ランダム投稿</span>
+                        <span class="menu-desc">AI生成・自動投稿の管理</span>
+                    </div>
+                    <div class="menu-item">
+                        <span class="menu-name">設定</span>
+                        <span class="menu-desc">アプリケーション設定</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h3 class="card-title">投稿ステータス</h3>
+                <div class="status-grid">
+                    <div class="status-item status-queued">
+                        <span class="status-badge">queued</span>
+                        <span class="status-desc">投稿待機中</span>
+                    </div>
+                    <div class="status-item status-posted">
+                        <span class="status-badge">posted</span>
+                        <span class="status-desc">投稿完了</span>
+                    </div>
+                    <div class="status-item status-failed">
+                        <span class="status-badge">failed</span>
+                        <span class="status-desc">投稿失敗</span>
+                    </div>
+                    <div class="status-item status-scheduled">
+                        <span class="status-badge">scheduled</span>
+                        <span class="status-desc">予約投稿待機中</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- アカウント管理 -->
+        <section class="content-section" id="accounts">
+            <h2 class="section-title">アカウント管理</h2>
+
+            <div class="content-card">
+                <h3 class="card-title">新規アカウント追加</h3>
+
+                <h4>基本設定</h4>
+                <div class="steps-list">
+                    <div class="step-item">
+                        <div class="step-icon">1</div>
+                        <div class="step-content">
+                            <strong>アカウント管理タブ</strong>を開く
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">2</div>
+                        <div class="step-content">
+                            <strong>新しいアカウントを追加</strong>ボタンをクリック
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">3</div>
+                        <div class="step-content">
+                            基本情報を入力：
+                            <ul>
+                                <li><strong>名前</strong>: 表示名</li>
+                                <li><strong>ユーザー名</strong>: X（旧Twitter）のID（@を含む）</li>
+                                <li><strong>パスワード</strong>: Xアカウントのパスワード</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h4>プロキシ設定（任意）</h4>
+                <p>プロキシを使用する場合、以下を設定：</p>
+                <ul class="feature-list">
+                    <li><strong>Proxy Hostname</strong>: プロキシサーバーのアドレス</li>
+                    <li><strong>Proxy Port</strong>: ポート番号</li>
+                    <li><strong>Proxy Username</strong>: 認証が必要な場合のみ</li>
+                    <li><strong>Proxy Password</strong>: 認証が必要な場合のみ</li>
+                </ul>
+                <p>設定完了後、<strong>追加</strong>ボタンで保存</p>
+            </div>
+
+            <div class="content-card">
+                <h3 class="card-title">アカウント一括登録</h3>
+                <p>ExcelまたはCSVファイルから複数のアカウント情報を一括でインポートできます。</p>
+
+                <div class="info-box info-box-blue">
+                    <div class="info-box-header">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                        </svg>
+                        対応形式
+                    </div>
+                    <div class="info-box-content">
+                        <span class="file-badge">Excel (.xlsx)</span>
+                        <span class="file-badge">CSV (.csv)</span>
+                    </div>
+                </div>
+
+                <h4>手順</h4>
+                <div class="steps-list">
+                    <div class="step-item">
+                        <div class="step-icon">1</div>
+                        <div class="step-content">
+                            <strong>アカウント管理</strong>タブ → <strong>アカウント一括登録</strong>サブタブを開く
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">2</div>
+                        <div class="step-content">
+                            テンプレートをダウンロード（Excel または CSV）
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">3</div>
+                        <div class="step-content">
+                            テンプレートにアカウント情報を入力
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">4</div>
+                        <div class="step-content">
+                            ファイルをドラッグ＆ドロップでアップロード
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">5</div>
+                        <div class="step-content">
+                            プレビューを確認し、<strong>アカウント追加</strong>をクリック
+                        </div>
+                    </div>
+                </div>
+
+                <h4>必須項目</h4>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>列名</th>
+                            <th>説明</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>アカウント名</td>
+                            <td>表示名（重複不可）</td>
+                        </tr>
+                        <tr>
+                            <td>X ID（@～）</td>
+                            <td>TwitterのID（@付き）</td>
+                        </tr>
+                        <tr>
+                            <td>パスワード</td>
+                            <td>Twitterパスワード</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 定期投稿 -->
+        <section class="content-section" id="regular-post">
+            <h2 class="section-title">定期投稿</h2>
+
+            <div class="content-card">
+                <h3 class="card-title">定期投稿とは</h3>
+                <div class="highlight-box">
+                    <p>定期投稿は、指定した間隔で自動的に投稿を実行する機能です。</p>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h3 class="card-title">投稿間隔の設定</h3>
+                <div class="steps-list">
+                    <div class="step-item">
+                        <div class="step-icon">1</div>
+                        <div class="step-content">
+                            <strong>定期投稿タブ</strong>を開く
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">2</div>
+                        <div class="step-content">
+                            <strong>設定タブ</strong>を選択
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">3</div>
+                        <div class="step-content">
+                            アカウントごとに投稿間隔を設定<br>
+                            <span class="hint">選択可能な間隔: 5分、1時間、2時間、3時間、6時間、12時間、24時間</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h3 class="card-title">投稿内容の登録</h3>
+                <div class="steps-list">
+                    <div class="step-item">
+                        <div class="step-icon">1</div>
+                        <div class="step-content">
+                            <strong>定期投稿タブ</strong> → <strong>キュータブ</strong>を選択
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">2</div>
+                        <div class="step-content">
+                            <strong>新しい投稿を追加</strong>ボタンをクリック
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">3</div>
+                        <div class="step-content">
+                            投稿内容を入力
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">4</div>
+                        <div class="step-content">
+                            画像を添付（最大4枚）
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">5</div>
+                        <div class="step-content">
+                            <strong>追加</strong>ボタンで投稿キューに追加
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h3 class="card-title">定期実行の開始・停止</h3>
+
+                <div class="two-column">
+                    <div class="column">
+                        <h4>開始方法</h4>
+                        <ol class="numbered-list">
+                            <li><strong>定期投稿タブ</strong>を開く</li>
+                            <li>「<strong>定期実行を開始</strong>」ボタンをクリック</li>
+                            <li>ボタンが「定期実行を停止」に変わる</li>
+                            <li>設定されたアカウントが自動的に投稿開始</li>
+                        </ol>
+                    </div>
+                    <div class="column">
+                        <h4>停止方法</h4>
+                        <ol class="numbered-list">
+                            <li>「<strong>定期実行を停止</strong>」ボタンをクリック</li>
+                            <li>全てのアカウントの自動投稿が停止</li>
+                            <li>ボタンが「定期実行を開始」に戻る</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="warning-box">
+                    <div class="warning-header">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                            <line x1="12" y1="9" x2="12" y2="13"/>
+                            <line x1="12" y1="17" x2="12.01" y2="17"/>
+                        </svg>
+                        重要なポイント
+                    </div>
+                    <ul>
+                        <li><strong>アカウント単位</strong>で有効/無効を設定可能</li>
+                        <li><strong>無効アカウント</strong>は定期実行対象外</li>
+                        <li><strong>実行中でも個別</strong>にアカウント設定変更可能</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h3 class="card-title">今すぐ投稿機能</h3>
+                <div class="success-box">
+                    <ul>
+                        <li><strong>今すぐ投稿</strong>ボタンでスケジュールを待たずに即座投稿</li>
+                        <li>投稿後は通常通り次の投稿がスケジュールされます</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 予約投稿 -->
+        <section class="content-section" id="scheduled-post">
+            <h2 class="section-title">予約投稿</h2>
+
+            <div class="content-card">
+                <h3 class="card-title">予約投稿とは</h3>
+                <div class="highlight-box">
+                    <p>特定の日時に投稿を実行する機能です。繰り返し設定で毎日同じ時刻に自動投稿することもできます。</p>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h3 class="card-title">予約投稿の作成</h3>
+                <div class="steps-list">
+                    <div class="step-item">
+                        <div class="step-icon">1</div>
+                        <div class="step-content">
+                            <strong>予約投稿タブ</strong>を開く
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">2</div>
+                        <div class="step-content">
+                            <strong>新しい予約投稿を追加</strong>ボタンをクリック
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">3</div>
+                        <div class="step-content">
+                            <strong>投稿内容</strong>を入力
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">4</div>
+                        <div class="step-content">
+                            <strong>日時</strong>を指定（YYYY-MM-DD HH:MM形式）
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">5</div>
+                        <div class="step-content">
+                            <strong>アカウント</strong>を選択
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">6</div>
+                        <div class="step-content">
+                            <strong>繰り返し</strong>を設定（オプション）
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">7</div>
+                        <div class="step-content">
+                            <strong>画像</strong>を添付（最大4枚）
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">8</div>
+                        <div class="step-content">
+                            <strong>追加</strong>ボタンで保存
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h3 class="card-title">繰り返し投稿</h3>
+                <div class="success-box">
+                    <ul>
+                        <li><strong>繰り返し投稿</strong>にチェックを入れると、毎日同じ時刻に投稿</li>
+                        <li>投稿後、自動的に翌日の同時刻に再スケジュール</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h3 class="card-title">管理機能</h3>
+                <ul class="feature-list">
+                    <li><strong>編集</strong>: 投稿内容や日時の変更</li>
+                    <li><strong>削除</strong>: 予約投稿の削除</li>
+                    <li><strong>今すぐ投稿</strong>: 予約時刻を待たずに即座投稿</li>
+                    <li><strong>ステータス確認</strong>: scheduled/posted/failedの状態表示</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 画像管理 -->
+        <section class="content-section" id="images">
+            <h2 class="section-title">画像管理</h2>
+
+            <div class="content-card">
+                <h3 class="card-title">対応形式</h3>
+                <div class="info-box">
+                    <div class="info-box-content format-list">
+                        <span class="format-badge">JPEG (.jpg, .jpeg)</span>
+                        <span class="format-badge">PNG (.png)</span>
+                        <span class="format-badge">GIF (.gif)</span>
+                        <span class="format-badge highlight">最大4枚まで同時添付可能</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h3 class="card-title">アップロード方法</h3>
+                <div class="steps-list">
+                    <div class="step-item">
+                        <div class="step-icon">1</div>
+                        <div class="step-content">
+                            <strong>画像選択</strong>ボタンをクリック
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">2</div>
+                        <div class="step-content">
+                            ファイルダイアログで画像を選択
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">3</div>
+                        <div class="step-content">
+                            <strong>アップロード</strong>ボタンで追加
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">4</div>
+                        <div class="step-content">
+                            画像プレビューで確認
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h3 class="card-title">画像編集機能</h3>
+                <div class="steps-list">
+                    <div class="step-item">
+                        <div class="step-icon">1</div>
+                        <div class="step-content">
+                            投稿一覧で<strong>画像セル</strong>をクリック
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">2</div>
+                        <div class="step-content">
+                            <strong>画像編集モーダル</strong>が開く
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">3</div>
+                        <div class="step-content">
+                            <strong>画像選択</strong>で新しい画像に変更
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">4</div>
+                        <div class="step-content">
+                            <strong>削除</strong>ボタンで画像を削除
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">5</div>
+                        <div class="step-content">
+                            <strong>保存</strong>ボタンで変更を適用
+                        </div>
+                    </div>
+                </div>
+
+                <div class="warning-box">
+                    <div class="warning-header">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="12" y1="8" x2="12" y2="12"/>
+                            <line x1="12" y1="16" x2="12.01" y2="16"/>
+                        </svg>
+                        注意点
+                    </div>
+                    <ul>
+                        <li><strong>定期投稿</strong>と<strong>予約投稿</strong>で画像は個別管理</li>
+                        <li>編集時は正しいタブ（定期投稿/予約投稿）で操作</li>
+                        <li><strong>画像ファイル</strong>は <code>images/アカウント名/</code> に保存</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- プロキシ設定 -->
+        <section class="content-section" id="proxy">
+            <h2 class="section-title">プロキシ設定</h2>
+
+            <div class="content-card">
+                <h3 class="card-title">プロキシとは</h3>
+                <div class="highlight-box">
+                    <p>プロキシサーバーを経由してインターネットに接続する機能です。XToolsPro2では、アカウントごとに異なるプロキシを設定できます。</p>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h3 class="card-title">プロキシ設定のメリット</h3>
+                <div class="success-box">
+                    <ul>
+                        <li><strong>IPアドレスの変更</strong>: 異なるIPアドレスから投稿可能</li>
+                        <li><strong>垢バン対策</strong>: 同一IPの他アカウントによる芋づる式バンを防止</li>
+                        <li><strong>複数アカウント運用</strong>: 同一IPからの大量アクセスを回避</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h3 class="card-title">推奨プロキシサービス: IPRoyal</h3>
+                <div class="info-box info-box-blue">
+                    <div class="info-box-header">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                        IPRoyal推奨設定
+                    </div>
+                    <div class="info-box-content">
+                        <div class="info-item">
+                            <span class="info-label">推奨設定</span>
+                            <span class="info-value">Residential（住宅用IP）/ Japan（Tokyoなど）</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">料金目安</span>
+                            <span class="info-value">通信1GB（最低）で約5~10$/月</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">特徴</span>
+                            <span class="info-value">日本経由アクセス可能・低価格</span>
+                        </div>
+                        <a href="https://iproyal.com/?r=1042290" class="download-btn" target="_blank">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                <polyline points="15 3 21 3 21 9"/>
+                                <line x1="10" y1="14" x2="21" y2="3"/>
+                            </svg>
+                            IPRoyal公式サイト
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h3 class="card-title">設定項目</h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>項目</th>
+                            <th>説明</th>
+                            <th>例</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Proxy Hostname</strong></td>
+                            <td>プロキシサーバーのアドレス</td>
+                            <td><code>proxy.example.com</code></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Proxy Port</strong></td>
+                            <td>ポート番号</td>
+                            <td><code>13128</code>, <code>11080</code></td>
+                        </tr>
+                        <tr>
+                            <td>Proxy Username</td>
+                            <td>認証用ユーザー名（任意）</td>
+                            <td><code>lbq*********AX</code></td>
+                        </tr>
+                        <tr>
+                            <td>Proxy Password</td>
+                            <td>認証用パスワード（任意）</td>
+                            <td><code>lvg*******9k_country-jp</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="content-card">
+                <h3 class="card-title">注意事項</h3>
+                <div class="warning-box">
+                    <div class="warning-header">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                            <line x1="12" y1="9" x2="12" y2="13"/>
+                            <line x1="12" y1="17" x2="12.01" y2="17"/>
+                        </svg>
+                        重要な注意点
+                    </div>
+                    <ul>
+                        <li>信頼できるプロキシサービスを利用</li>
+                        <li>無料プロキシは速度・セキュリティに問題あり</li>
+                        <li>設定が正しくないと投稿が失敗</li>
+                        <li>接続失敗時は設定を空欄にして直接接続を試行</li>
+                        <li>対応プロトコル: <strong>HTTP/HTTPS のみ</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- トラブルシューティング -->
+        <section class="content-section" id="troubleshooting">
+            <h2 class="section-title">トラブルシューティング</h2>
+
+            <div class="content-card">
+                <h3 class="card-title">ログインできない</h3>
+                <div class="trouble-item">
+                    <div class="trouble-symptom">
+                        <strong>症状:</strong> 認証エラーでログインできない
+                    </div>
+                    <div class="trouble-solution">
+                        <strong>原因と解決方法:</strong>
+                        <ul>
+                            <li><strong>決済状況</strong>: Google Sheetsで「売切決済」ステータスを確認</li>
+                            <li><strong>セッション状態</strong>: 他のPCでログイン中でないか確認</li>
+                            <li><strong>デバイス変更</strong>: PC変更申請が必要な場合があります</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h3 class="card-title">投稿が実行されない</h3>
+                <div class="trouble-item">
+                    <div class="trouble-symptom">
+                        <strong>症状:</strong> スケジュールされた投稿が実行されない
+                    </div>
+                    <div class="trouble-solution">
+                        <strong>原因と解決方法:</strong>
+                        <ul>
+                            <li><strong>スケジューラー状態</strong>: 投稿が開始されているか確認</li>
+                            <li><strong>アカウント設定</strong>: 投稿間隔が有効になっているか確認</li>
+                            <li><strong>キューの状態</strong>: 投稿キューに内容があるか確認</li>
+                            <li><strong>ブラウザ</strong>: Chromeが正常に動作しているか確認</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h3 class="card-title">画像が表示されない</h3>
+                <div class="trouble-item">
+                    <div class="trouble-symptom">
+                        <strong>症状:</strong> 画像が正常に表示されない
+                    </div>
+                    <div class="trouble-solution">
+                        <strong>原因と解決方法:</strong>
+                        <ul>
+                            <li><strong>ファイル形式</strong>: 対応形式（JPEG、PNG、GIF）を確認</li>
+                            <li><strong>ファイルサイズ</strong>: 大きすぎる画像は圧縮が必要</li>
+                            <li><strong>ファイルパス</strong>: 画像ファイルが正しい場所に保存されているか確認</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h3 class="card-title">サポート情報</h3>
+                <div class="info-box">
+                    <div class="info-box-content">
+                        <div class="info-item">
+                            <span class="info-label">ログファイル</span>
+                            <span class="info-value"><code>log/</code> フォルダ内のログを確認</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">アプリケーションログ</span>
+                            <span class="info-value"><code>log/app.log</code></span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">投稿ログ</span>
+                            <span class="info-value"><code>log/x_post_debug.log</code></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- システム要件 -->
+        <section class="content-section" id="requirements">
+            <h2 class="section-title">システム要件</h2>
+
+            <div class="content-card">
+                <h3 class="card-title">推奨スペック</h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>項目</th>
+                            <th>要件</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>OS</strong></td>
+                            <td>Windows 10/11 必須（macOS非対応）</td>
+                        </tr>
+                        <tr>
+                            <td><strong>メモリ</strong></td>
+                            <td>4GB以上（推奨8GB以上）</td>
+                        </tr>
+                        <tr>
+                            <td><strong>CPU</strong></td>
+                            <td>Intel Core i5以上 / AMD Ryzen 5以上</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ストレージ</strong></td>
+                            <td>SSD推奨（1GB以上の空き容量）</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ブラウザ</strong></td>
+                            <td>Google Chrome（最新版）</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ネットワーク</strong></td>
+                            <td>インターネット接続必須</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="content-card">
+                <h3 class="card-title">定期実行について</h3>
+                <div class="warning-box">
+                    <div class="warning-header">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                            <line x1="12" y1="9" x2="12" y2="13"/>
+                            <line x1="12" y1="17" x2="12.01" y2="17"/>
+                        </svg>
+                        重要
+                    </div>
+                    <ul>
+                        <li><strong>PC常時稼働が必要</strong>: 定期投稿を継続するためには、PCをつけっぱなしにする必要があります</li>
+                        <li><strong>スリープ・休止状態では動作停止</strong>: PCがスリープや休止状態になると投稿が実行されません</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h3 class="card-title">PC常時稼働が困難な場合の解決策</h3>
+
+                <h4>1. VPS（仮想プライベートサーバー）の利用</h4>
+                <ul class="feature-list">
+                    <li><strong>推奨</strong>: AWS、さくらのVPS、ConoHa VPS等でWindows VPSを契約</li>
+                    <li>24時間365日稼働可能</li>
+                    <li>月額費用: 1,000円〜3,000円程度</li>
+                </ul>
+
+                <h4>2. 仮想デスクトップサービスの利用</h4>
+                <ul class="feature-list">
+                    <li>Microsoft 365のWindows 365</li>
+                    <li>Amazon WorkSpaces</li>
+                    <li>時間課金や月額制で利用可能</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- フッター -->
+        <footer class="main-footer">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">X</span>
+                    <span>ToolsPro2</span>
+                </div>
+                <p class="footer-copyright">© 2025 XToolsPro2. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="https://join.slack.com/t/youyou-community/shared_invite/zt-33endw2tz-IZ2Y3OoO3Xk0W7lWtHYN7A" target="_blank">Slackコミュニティ</a>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
