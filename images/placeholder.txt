@@ -1,0 +1,10 @@
+Placeholder file for AI mode and spreadsheet screenshots.
+
+The following screenshots need to be captured:
+- ai-mode-interface.png - AI mode interface with API key input
+- ai-mode-selection.png - Generated posts selection interface
+- spreadsheet-import-area.png - Spreadsheet import textarea
+- spreadsheet-preview.png - Parsed posts preview
+- spreadsheet-add-buttons.png - Add buttons for spreadsheet posts
+
+These screenshots will be taken when the AI mode and spreadsheet import features are accessible.

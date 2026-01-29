@@ -77,6 +77,12 @@
                 </svg>
                 予約投稿
             </a>
+            <a href="#random-post" class="nav-link">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/>
+                </svg>
+                ランダム投稿
+            </a>
             <a href="#images" class="nav-link">
                 <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
@@ -444,6 +450,9 @@
                     <li><strong>Proxy Username</strong>: 認証が必要な場合のみ</li>
                     <li><strong>Proxy Password</strong>: 認証が必要な場合のみ</li>
                 </ul>
+                <div class="screenshot-container">
+                    <img src="images/account-proxy-settings-1.png" alt="プロキシ設定画面" class="screenshot">
+                </div>
                 <p>設定完了後、<strong>追加</strong>ボタンで保存</p>
             </div>
 
@@ -477,6 +486,9 @@
                         <div class="step-icon">2</div>
                         <div class="step-content">
                             テンプレートをダウンロード（Excel または CSV）
+                            <div class="screenshot-container">
+                                <img src="images/account-bulk-02-template-download.png" alt="テンプレートダウンロード画面" class="screenshot">
+                            </div>
                         </div>
                     </div>
                     <div class="step-item">
@@ -489,12 +501,18 @@
                         <div class="step-icon">4</div>
                         <div class="step-content">
                             ファイルをドラッグ＆ドロップでアップロード
+                            <div class="screenshot-container">
+                                <img src="images/account-bulk-03-upload-area.png" alt="ファイルアップロードエリア" class="screenshot">
+                            </div>
                         </div>
                     </div>
                     <div class="step-item">
                         <div class="step-icon">5</div>
                         <div class="step-content">
                             プレビューを確認し、<strong>アカウント追加</strong>をクリック
+                            <div class="screenshot-container">
+                                <img src="images/account-bulk-04-preview-table.png" alt="プレビューテーブル" class="screenshot">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -730,6 +748,105 @@
                     <li><strong>削除</strong>: 予約投稿の削除</li>
                     <li><strong>今すぐ投稿</strong>: 予約時刻を待たずに即座投稿</li>
                     <li><strong>ステータス確認</strong>: scheduled/posted/failedの状態表示</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ランダム投稿 -->
+        <section class="content-section" id="random-post">
+            <h2 class="section-title">ランダム投稿</h2>
+
+            <div class="content-card">
+                <h3 class="card-title">ランダム投稿とは</h3>
+                <div class="highlight-box">
+                    <p>ランダム投稿は、AIによる自動生成、スプレッドシート取込、手動入力など様々な方法で投稿コンテンツを準備し、自動的にランダム選択して投稿する高度な機能です。</p>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h3 class="card-title">投稿キュー</h3>
+                <p>ランダム投稿の元となるコンテンツを管理します。アカウントごとに独立したキューを持ちます。</p>
+                <div class="screenshot-container">
+                    <img src="images/random-01-queue-overview.png" alt="投稿キュー概要" class="screenshot">
+                </div>
+
+                <h4>投稿の追加方法</h4>
+                <div class="steps-list">
+                    <div class="step-item">
+                        <div class="step-icon">1</div>
+                        <div class="step-content">
+                            <strong>アカウント</strong>を選択
+                            <div class="screenshot-container">
+                                <img src="images/random-02-account-select.png" alt="アカウント選択" class="screenshot">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">2</div>
+                        <div class="step-content">
+                            「<strong>新しい投稿を追加</strong>」ボタンをクリック
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">3</div>
+                        <div class="step-content">
+                            <strong>投稿内容</strong>を入力し、<strong>画像</strong>を添付（任意、最大4枚）
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">4</div>
+                        <div class="step-content">
+                            「<strong>追加</strong>」ボタンで保存
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h3 class="card-title">ランダム投稿の開始・停止</h3>
+                <div class="screenshot-container">
+                    <img src="images/random-03-buttons.png" alt="ランダム投稿ボタン" class="screenshot">
+                </div>
+                <div class="two-column">
+                    <div class="column">
+                        <h4>開始方法</h4>
+                        <ol class="numbered-list">
+                            <li>アカウントを選択</li>
+                            <li>「<strong>ランダム投稿開始</strong>」ボタンをクリック</li>
+                            <li>自動投稿が開始</li>
+                        </ol>
+                    </div>
+                    <div class="column">
+                        <h4>テスト投稿</h4>
+                        <ul class="feature-list">
+                            <li>「<strong>今すぐテスト投稿</strong>」で動作確認</li>
+                            <li>実際の投稿前に動作テスト可能</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h3 class="card-title">画像プール</h3>
+                <p>複数の投稿で共有する画像リソースを管理します。ランダム投稿時に自動選択されます。</p>
+                <div class="screenshot-container">
+                    <img src="images/random-07-upload-area.png" alt="画像プールアップロード" class="screenshot">
+                </div>
+                <div class="screenshot-container">
+                    <img src="images/random-08-image-grid.png" alt="画像プールグリッド" class="screenshot">
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h3 class="card-title">ランダム投稿設定</h3>
+                <div class="screenshot-container">
+                    <img src="images/random-09-settings-overview.png" alt="ランダム投稿設定" class="screenshot">
+                </div>
+                <ul class="feature-list">
+                    <li><strong>基本投稿間隔</strong>: 投稿の基準間隔</li>
+                    <li><strong>ゆらぎ（バリアンス）</strong>: 間隔のランダム変動幅</li>
+                    <li><strong>投稿時間帯</strong>: 開始・終了時刻</li>
+                    <li><strong>画像モード</strong>: オリジナル/プール選択</li>
                 </ul>
             </div>
         </section>

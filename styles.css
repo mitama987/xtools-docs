@@ -804,6 +804,40 @@ code {
     color: var(--text-primary);
 }
 
+/* Screenshot Container */
+.screenshot-container {
+    margin: 1rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    background: var(--bg-tertiary);
+}
+
+.screenshot {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform var(--transition-normal);
+}
+
+.screenshot:hover {
+    transform: scale(1.02);
+}
+
+.screenshot-caption {
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+    background: var(--bg-secondary);
+}
+
+/* Lightbox for screenshots */
+.screenshot-container.clickable {
+    cursor: pointer;
+}
+
 /* Menu Grid */
 .menu-grid {
     display: grid;
