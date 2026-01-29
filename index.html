@@ -298,22 +298,32 @@
                     <div class="step-item">
                         <div class="step-icon">2</div>
                         <div class="step-content">
-                            コマンドプロンプトが自動起動します
+                            コマンドプロンプトが自動起動し、<strong>ブラウザが自動的に開きます</strong>
                         </div>
                     </div>
                     <div class="step-item">
                         <div class="step-icon">3</div>
                         <div class="step-content">
-                            URLにアクセス：<code>http://localhost:5502</code><br>
-                            <span class="hint">Ctrl+クリックでURLを開く、またはブラウザに貼り付け</span>
-                        </div>
-                    </div>
-                    <div class="step-item">
-                        <div class="step-icon">4</div>
-                        <div class="step-content">
                             ブラウザで起動完了！
                         </div>
                     </div>
+                </div>
+
+                <div class="warning-box">
+                    <div class="warning-header">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="12" y1="8" x2="12" y2="12"/>
+                            <line x1="12" y1="16" x2="12.01" y2="16"/>
+                        </svg>
+                        ブラウザが自動で開かない場合
+                    </div>
+                    <p>コマンドプロンプト上に表示されるURLにアクセスしてください：</p>
+                    <ul>
+                        <li><code>http://localhost:5502</code></li>
+                        <li><strong>Ctrl+クリック</strong>でURLを開く</li>
+                        <li>または、URLをコピーして<strong>ブラウザに貼り付け</strong>て開く</li>
+                    </ul>
                 </div>
             </div>
 
@@ -327,6 +337,69 @@
                     <li>ログイン画面が表示されるので、メールアドレスを入力してログイン</li>
                     <li>セットアップ完了！</li>
                 </ol>
+            </div>
+
+            <div class="content-card">
+                <h3 class="card-title">
+                    <span class="step-number">4</span>
+                    バージョンアップ方法
+                </h3>
+                <p>新しいバージョンがリリースされた場合、以下の手順でアップデートしてください。</p>
+
+                <div class="steps-list">
+                    <div class="step-item">
+                        <div class="step-icon">1</div>
+                        <div class="step-content">
+                            <strong>Google Drive</strong>から最新版のexeファイルをダウンロード
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">2</div>
+                        <div class="step-content">
+                            現在使用中のXToolsPro2が<strong>起動中の場合は終了</strong>する
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">3</div>
+                        <div class="step-content">
+                            既存のexeファイルが保存されている<strong>フォルダを開く</strong>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">4</div>
+                        <div class="step-content">
+                            古いexeファイルを<strong>新しいexeファイルに入れ替え</strong>る（上書き or 削除して配置）
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">5</div>
+                        <div class="step-content">
+                            新しいexeファイルを<strong>ダブルクリックで起動</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="success-box">
+                    <ul>
+                        <li><strong>データは自動引継ぎ</strong>: 新しいバージョンを起動すると、アカウント情報・投稿キュー・設定など、これまでのデータがすべて自動的に読み込まれます</li>
+                        <li><strong>同じフォルダで入れ替え</strong>: 必ず既存のexeと同じフォルダ内で入れ替えてください</li>
+                    </ul>
+                </div>
+
+                <div class="warning-box">
+                    <div class="warning-header">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="12" y1="8" x2="12" y2="12"/>
+                            <line x1="12" y1="16" x2="12.01" y2="16"/>
+                        </svg>
+                        注意
+                    </div>
+                    <ul>
+                        <li>アップデート前に起動中のアプリは必ず<strong>終了</strong>してください</li>
+                        <li>exeファイルを別のフォルダに配置すると、データが引き継がれません</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
@@ -1076,7 +1149,7 @@
                     <div class="trouble-solution">
                         <strong>原因と解決方法:</strong>
                         <ul>
-                            <li><strong>決済状況</strong>: Google Sheetsで「売切決済」ステータスを確認</li>
+                            <li><strong>購入状況</strong>: まだ購入していない、またはサブスク契約が切れている可能性があります</li>
                             <li><strong>セッション状態</strong>: 他のPCでログイン中でないか確認</li>
                             <li><strong>デバイス変更</strong>: PC変更申請が必要な場合があります</li>
                         </ul>
@@ -1120,12 +1193,27 @@
             </div>
 
             <div class="content-card">
-                <h3 class="card-title">サポート情報</h3>
-                <div class="info-box">
+                <h3 class="card-title">サポートへの問い合わせ方法</h3>
+
+                <div class="highlight-box">
+                    <h4>方法1: ログを送信ボタンを使う（推奨）</h4>
+                    <p><strong>設定メニュー</strong> → <strong>「ログを送信」ボタン</strong>をクリックしてください。</p>
+                    <p>このボタンを押すと、トラブルシューティングに必要なログファイル一式が自動的に送信されます。</p>
+                </div>
+
+                <div class="info-box" style="margin-top: 1rem;">
+                    <div class="info-box-header">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                        </svg>
+                        方法2: 手動でログを送信
+                    </div>
                     <div class="info-box-content">
+                        <p>以下のログファイル一式を、<strong>Slackコミュニティの質問チャンネル</strong>に送ってください。</p>
                         <div class="info-item">
-                            <span class="info-label">ログファイル</span>
-                            <span class="info-value"><code>log/</code> フォルダ内のログを確認</span>
+                            <span class="info-label">ログフォルダ</span>
+                            <span class="info-value"><code>log/</code> フォルダ内</span>
                         </div>
                         <div class="info-item">
                             <span class="info-label">アプリケーションログ</span>
@@ -1135,6 +1223,12 @@
                             <span class="info-label">投稿ログ</span>
                             <span class="info-value"><code>log/x_post_debug.log</code></span>
                         </div>
+                        <a href="https://join.slack.com/t/youyou-community/shared_invite/zt-33endw2tz-IZ2Y3OoO3Xk0W7lWtHYN7A" class="download-btn" target="_blank" style="margin-top: 1rem;">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+                                <path d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zM6.313 15.165a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313z"/>
+                            </svg>
+                            Slackコミュニティに参加
+                        </a>
                     </div>
                 </div>
             </div>
