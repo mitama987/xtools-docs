@@ -83,6 +83,31 @@
                 </svg>
                 ランダム投稿
             </a>
+            <a href="#auto-follow" class="nav-link">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                    <circle cx="8.5" cy="7" r="4"/>
+                    <line x1="20" y1="8" x2="20" y2="14"/>
+                    <line x1="23" y1="11" x2="17" y2="11"/>
+                </svg>
+                自動フォロー
+            </a>
+            <a href="#auto-reply" class="nav-link">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                </svg>
+                自動リプライ
+            </a>
+            <a href="#account-creator" class="nav-link">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                    <circle cx="8.5" cy="7" r="4"/>
+                    <line x1="20" y1="8" x2="20" y2="14"/>
+                    <line x1="23" y1="11" x2="17" y2="11"/>
+                    <circle cx="20" cy="11" r="1" fill="currentColor"/>
+                </svg>
+                Xアカウント作成
+            </a>
             <a href="#images" class="nav-link">
                 <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
@@ -921,6 +946,263 @@
                     <li><strong>投稿時間帯</strong>: 開始・終了時刻</li>
                     <li><strong>画像モード</strong>: オリジナル/プール選択</li>
                 </ul>
+            </div>
+        </section>
+
+        <!-- 自動フォロー -->
+        <section class="content-section" id="auto-follow">
+            <h2 class="section-title">自動フォロー</h2>
+
+            <div class="content-card">
+                <h3 class="card-title">自動フォローとは</h3>
+                <div class="highlight-box">
+                    <p>指定したユーザーリストに基づいて、自動的にフォローを実行する機能です。フォロワー獲得やアカウント育成に活用できます。</p>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h3 class="card-title">フォローリストの準備</h3>
+                <p>CSVファイルでフォロー対象のユーザーリストを準備します。</p>
+                <div class="screenshot-container">
+                    <img src="images/auto-follow-02-csv-upload.png" alt="CSVアップロード" class="screenshot">
+                </div>
+
+                <h4>CSVファイルの形式</h4>
+                <div class="info-box info-box-blue">
+                    <div class="info-box-content">
+                        <p>1行に1ユーザー名（@なし）を記載したCSVファイルを用意します。</p>
+                        <pre><code>username1
+username2
+username3</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h3 class="card-title">自動フォローの設定</h3>
+                <div class="screenshot-container">
+                    <img src="images/auto-follow-05-settings.png" alt="自動フォロー設定" class="screenshot">
+                </div>
+                <ul class="feature-list">
+                    <li><strong>フォロー数</strong>: 1回あたりのフォロー数</li>
+                    <li><strong>間隔</strong>: フォロー間の待機時間（秒）</li>
+                    <li><strong>ゆらぎ</strong>: 間隔のランダム変動幅</li>
+                </ul>
+
+                <div class="warning-box">
+                    <div class="warning-header">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                            <line x1="12" y1="9" x2="12" y2="13"/>
+                            <line x1="12" y1="17" x2="12.01" y2="17"/>
+                        </svg>
+                        注意事項
+                    </div>
+                    <ul>
+                        <li>短時間での大量フォローは<strong>アカウント凍結のリスク</strong>があります</li>
+                        <li>適切な間隔を設定し、<strong>自然なペース</strong>でフォローしてください</li>
+                        <li>Xの利用規約を遵守してご利用ください</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h3 class="card-title">実行と履歴</h3>
+                <div class="screenshot-container">
+                    <img src="images/auto-follow-06-start-buttons.png" alt="自動フォロー開始ボタン" class="screenshot">
+                </div>
+                <div class="two-column">
+                    <div class="column">
+                        <h4>開始方法</h4>
+                        <ol class="numbered-list">
+                            <li>CSVファイルをアップロード</li>
+                            <li>フォロー設定を行う</li>
+                            <li>「<strong>自動フォロー開始</strong>」をクリック</li>
+                        </ol>
+                    </div>
+                    <div class="column">
+                        <h4>履歴確認</h4>
+                        <ul class="feature-list">
+                            <li>フォロー実行履歴を確認可能</li>
+                            <li>成功/失敗のステータス表示</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 自動リプライ -->
+        <section class="content-section" id="auto-reply">
+            <h2 class="section-title">自動リプライ</h2>
+
+            <div class="content-card">
+                <h3 class="card-title">自動リプライとは</h3>
+                <div class="highlight-box">
+                    <p>AIを活用して、指定した会話やキーワードに対して自動的にリプライを生成・投稿する機能です。エンゲージメント向上やコミュニケーション効率化に活用できます。</p>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h3 class="card-title">AI設定</h3>
+                <p>自動リプライの生成にはAI（OpenAI GPT）を使用します。</p>
+                <div class="screenshot-container">
+                    <img src="images/auto-reply-01-ai-settings.png" alt="AI設定画面" class="screenshot">
+                </div>
+
+                <h4>設定項目</h4>
+                <ul class="feature-list">
+                    <li><strong>APIキー</strong>: OpenAIのAPIキーを設定</li>
+                    <li><strong>モデル</strong>: 使用するGPTモデルを選択</li>
+                    <li><strong>プロンプト</strong>: リプライ生成時の指示文を設定</li>
+                </ul>
+            </div>
+
+            <div class="content-card">
+                <h3 class="card-title">会話の追加</h3>
+                <p>リプライ対象の会話（ツイートURL）を追加します。</p>
+                <div class="screenshot-container">
+                    <img src="images/auto-reply-02-add-conversation.png" alt="会話追加" class="screenshot">
+                </div>
+
+                <div class="steps-list">
+                    <div class="step-item">
+                        <div class="step-icon">1</div>
+                        <div class="step-content">
+                            「<strong>会話を追加</strong>」ボタンをクリック
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">2</div>
+                        <div class="step-content">
+                            リプライ対象の<strong>ツイートURL</strong>を入力
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">3</div>
+                        <div class="step-content">
+                            リプライの<strong>トーンや内容の指示</strong>を設定（任意）
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">4</div>
+                        <div class="step-content">
+                            「<strong>追加</strong>」ボタンで保存
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h3 class="card-title">モニタリングと実行</h3>
+                <div class="screenshot-container">
+                    <img src="images/auto-reply-04-monitoring-tab.png" alt="モニタリングタブ" class="screenshot">
+                </div>
+                <ul class="feature-list">
+                    <li><strong>モニタリング</strong>: 登録した会話の新着リプライを監視</li>
+                    <li><strong>自動生成</strong>: AIがリプライ内容を自動生成</li>
+                    <li><strong>実行ログ</strong>: リプライ実行の履歴を確認</li>
+                </ul>
+
+                <div class="warning-box">
+                    <div class="warning-header">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                            <line x1="12" y1="9" x2="12" y2="13"/>
+                            <line x1="12" y1="17" x2="12.01" y2="17"/>
+                        </svg>
+                        注意事項
+                    </div>
+                    <ul>
+                        <li>OpenAI APIの<strong>利用料金</strong>が発生します</li>
+                        <li>スパム的な使用は<strong>アカウント凍結のリスク</strong>があります</li>
+                        <li>リプライ内容は<strong>適宜確認</strong>することを推奨します</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Xアカウント作成 -->
+        <section class="content-section" id="account-creator">
+            <h2 class="section-title">Xアカウント作成</h2>
+
+            <div class="content-card">
+                <h3 class="card-title">Xアカウント作成とは</h3>
+                <div class="highlight-box">
+                    <p>X（旧Twitter）の新規アカウントを自動で作成する機能です。複数アカウントの運用を効率化できます。</p>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h3 class="card-title">作成手順</h3>
+                <div class="steps-list">
+                    <div class="step-item">
+                        <div class="step-icon">1</div>
+                        <div class="step-content">
+                            サイドメニューから「<strong>Xアカウント作成</strong>」を選択
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">2</div>
+                        <div class="step-content">
+                            <strong>メールアドレス</strong>を入力（未使用のもの）
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">3</div>
+                        <div class="step-content">
+                            <strong>ユーザー名</strong>と<strong>パスワード</strong>を設定
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">4</div>
+                        <div class="step-content">
+                            「<strong>アカウント作成</strong>」ボタンをクリック
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">5</div>
+                        <div class="step-content">
+                            <strong>メール認証</strong>を完了（メールが届いたら認証リンクをクリック）
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h3 class="card-title">作成後の設定</h3>
+                <ul class="feature-list">
+                    <li><strong>プロフィール設定</strong>: アイコン、ヘッダー画像、自己紹介文を設定</li>
+                    <li><strong>アカウント管理に追加</strong>: 作成したアカウントを自動的にアカウント管理に登録</li>
+                    <li><strong>投稿設定</strong>: 定期投稿やランダム投稿の設定を行う</li>
+                </ul>
+
+                <div class="warning-box">
+                    <div class="warning-header">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                            <line x1="12" y1="9" x2="12" y2="13"/>
+                            <line x1="12" y1="17" x2="12.01" y2="17"/>
+                        </svg>
+                        重要な注意事項
+                    </div>
+                    <ul>
+                        <li>Xの利用規約では、<strong>複数アカウントの運用に制限</strong>があります</li>
+                        <li>同一IPからの大量アカウント作成は<strong>凍結リスク</strong>が高まります</li>
+                        <li><strong>プロキシの使用</strong>を強く推奨します</li>
+                        <li>各アカウントに<strong>固有のメールアドレス</strong>が必要です</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-card">
+                <h3 class="card-title">プロキシ設定の推奨</h3>
+                <div class="success-box">
+                    <p>アカウント作成時には、各アカウントに異なるIPアドレスを割り当てることで、凍結リスクを軽減できます。</p>
+                    <ul>
+                        <li><a href="#proxy">プロキシ設定</a>を参照して、IPRoyalなどのプロキシサービスを設定してください</li>
+                        <li>Residential（住宅用IP）の使用を推奨</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
